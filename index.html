@@ -1354,7 +1354,20 @@ input{font-family:inherit;}
 
     goToScreen('screen1');
   });
+<!-- Background Music -->
+<audio id="loveSong" loop preload="auto" playsinline>
+  <source src="Kalyani%20X%20Aasa%20Kooda%20X%20Majboor%20%20%20%20Sujay%20Honey%20Mashup%20%20%20Lyric%20Video%20%20%20Vibe%20Lyricz.mp3" type="audio/mpeg">
+</audio>
 
+
+const loveSong = document.getElementById("loveSong");
+loveSong.volume = 0.5;
+
+loveSong.play().catch(() => {
+  // Autoplay may be blocked by the browser
+});
+</script>
+})();
 })();
 </script>
 </body>
