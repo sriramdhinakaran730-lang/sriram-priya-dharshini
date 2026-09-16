@@ -1353,8 +1353,20 @@ input{font-family:inherit;}
     stopFloatingHearts3();
 
     goToScreen('screen1');
-  });
+const loveSong = document.getElementById("loveSong");
 
+function startMusic() {
+    loveSong.volume = 0.5;
+    loveSong.play().catch(() => {});
+}
+
+document.addEventListener("click", startMusic, { once: true });
+document.addEventListener("touchstart", startMusic, { once: true });  });
+
+}
+
+document.addEventListener("click", startMusic, { once: true });
+document.addEventListener("touchstart", startMusic, { once: true });
 })();
 </script>
 <body>
