@@ -1354,8 +1354,22 @@ input{font-family:inherit;}
 
     goToScreen('screen1');
   });
-
 })();
+  document.addEventListener("DOMContentLoaded", function () {
+    const loveSong = document.getElementById("loveSong");
+
+    function startMusic() {
+        loveSong.volume = 0.5;
+        loveSong.play().catch(() => {});
+    }
+
+    document.addEventListener("click", startMusic, { once: true });
+    document.addEventListener("touchstart", startMusic, { once: true });
+});
 </script>
 </body>
+  <audio id="loveSong" loop preload="auto" playsinline>
+    <source src="bg-music.mp3.mpeg" type="audio/mpeg">
+</audio>
+</audio>
 </html>
